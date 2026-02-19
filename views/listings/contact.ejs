@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PharmaGuard</title>
+    <link rel="stylesheet" href="/css/styles.css"> <!-- your main CSS -->
+    <style>
+        /* =====================================================
+   CONTACT PAGE – BLUE/TEAL THEME
+===================================================== */
+
+/* Hero Section */
+/* =====================================================
+   CONTACT PAGE – BLUE/TEAL THEME (COMPACT)
+===================================================== */
+
+/* =====================================================
+   CONTACT PAGE – BLUE/TEAL + WHITE THEME (COMPACT)
+===================================================== */
+
+/* Hero Section */
+.analysis-hero {
+    padding: 60px 10%;
+    text-align: center;
+    background: linear-gradient(135deg, #1b2b3a, #0d1a26);
+}
+
+.analysis-hero h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: #00e6b3; /* teal heading */
+}
+
+.analysis-hero p {
+    font-size: 16px;
+    color: #ffffff; /* white paragraph */
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Contact Form Section */
+.upload-section {
+    padding: 60px 10%;
+    display: flex;
+    justify-content: center;
+    background: #0d1a26;
+}
+
+.upload-card {
+    width: 500px;
+    padding: 30px;
+    border-radius: 16px;
+    background: #1a2b3d;
+    border: 1px solid rgba(0,230,179,0.6);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.upload-card h2 {
+    margin-bottom: 16px;
+    color: #00e6b3; /* teal */
+}
+
+.upload-card p {
+    margin-bottom: 16px;
+    color: #ffffff; /* white */
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 4px;
+    color: #00e6b3; /* teal label */
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #00e6b3;
+    background: #0d1a26;
+    color: #ffffff; /* white text in inputs */
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #b0c8dd; /* lighter white/gray placeholder */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00e6b3;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,230,179,0.3);
+}
+
+/* Button – Teal */
+.btn-main {
+    background: linear-gradient(90deg, #00e6b3, #009d85);
+    color: #0d1a26;
+    border-radius: 24px;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-main:hover {
+    background: #009d85;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #0b141a;
+    font-size: 13px;
+    color: #ffffff; /* white footer text */
+    border-top: 1px solid rgba(0,230,179,0.2);
+}
+
+/* Reset default browser spacing */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #0d1a26;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .analysis-hero h1 {
+        font-size: 28px;
+    }
+
+    .upload-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .btn-main {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Header Container */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background: #111827;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 1px;
+}
+.logo span {
+    color: #00e6b3;
+}
+
+/* Navigation */
+nav ul.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul.nav-links li a {
+    color: #00e6b3; /* teal nav links */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav ul.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00e6b3;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+nav ul.nav-links li a:hover::after,
+nav ul.nav-links li.active a::after {
+    width: 100%;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    nav ul.nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+   
+
+    <!-- Hero Section -->
+    <section class="analysis-hero">
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you! Fill out the form below for questions, feedback, or support inquiries.</p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="upload-section">
+        <div class="upload-card">
+            <h2>Send a Message</h2>
+            <form action="/contact" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="you@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Subject of your message">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-main">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; <%= new Date().getFullYear() %> PharmaGuard • Precision Medicine Intelligence Platform
+    </footer>
+
+</body>
+</html>

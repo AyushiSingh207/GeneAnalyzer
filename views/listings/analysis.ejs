@@ -1,0 +1,374 @@
+<style>
+/* =====================================================
+   ANALYSIS PAGE – DARK GREY + DARK GREEN
+===================================================== */
+
+/* Hero Section */
+.analysis-hero {
+    padding: 120px 10%;
+    text-align: center;
+    background: linear-gradient(135deg, #1b2b3a, #0d1a26); /* blue gradient */
+}
+
+.analysis-hero h1 {
+    font-size: 44px;
+    margin-bottom: 20px;
+    color: #a8d5ff; /* light blue for contrast */
+}
+
+.analysis-hero p {
+    font-size: 18px;
+    color: #b0c8dd;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Upload Section */
+.upload-section {
+    padding: 100px 10%;
+    display: flex;
+    justify-content: center;
+    background: #0d1a26; /* dark blue background */
+}
+
+.upload-card {
+    width: 550px;
+    padding: 50px;
+    border-radius: 18px;
+    background: #1a2b3d; /* blue card */
+    border: 1px solid rgba(70,130,180,0.6); /* soft blue border */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.upload-card h2 {
+    margin-bottom: 20px;
+    color: #82c0ff; /* bright blue text */
+}
+
+.upload-card p {
+    margin-bottom: 25px;
+    color: #cfdff1;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    color: #a8d5ff;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #4a6a85;
+    background: #0d1a26; /* dark blue input */
+    color: #a8d5ff;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3d7fbf;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(70,130,180,0.3); /* blue glow */
+}
+
+/* Button – Blue */
+.upload-section .btn-main {
+    background: linear-gradient(90deg, #3d7fbf, #1a4e7a); /* blue gradient */
+    color: #ffffff;
+    border-radius: 30px;
+}
+
+.upload-section .btn-main:hover {
+    background: #2a3e63;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Results Section */
+.results-section {
+    padding: 120px 10%;
+    display: flex;
+    justify-content: center;
+    background: #0d1a26; /* dark blue background */
+}
+
+.results-card {
+    width: 750px;
+    padding: 60px;
+    border-radius: 18px;
+    background: #1a2b3d; /* blue card */
+    border: 1px solid rgba(70,130,180,0.6); /* blue border */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.results-card h2 {
+    margin-bottom: 25px;
+    color: #82c0ff; /* bright blue text */
+}
+
+.result-placeholder {
+    padding: 30px;
+    border-radius: 12px;
+    background: #0d1a26; /* dark blue placeholder */
+    border-left: 5px solid #3d7fbf;
+    color: #a8d5ff;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #0b141a;
+    font-size: 14px;
+    color: #a8d5ff;
+    border-top: 1px solid rgba(70,130,180,0.2);
+}
+
+/* Reset default browser spacing */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #0d1a26; /* dark blue background */
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .analysis-hero h1 {
+        font-size: 32px;
+    }
+
+    .upload-card,
+    .results-card {
+        width: 100%;
+    }
+}
+
+/* Header Container */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #111827;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    font-weight: 700;
+    font-size: 1.75rem;
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 1px;
+}
+.logo span {
+    color: #00ffc8;
+}
+
+/* Navigation */
+nav ul.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav ul.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00ffc8;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+nav ul.nav-links li a:hover::after,
+nav ul.nav-links li.active a::after {
+    width: 100%;
+}
+
+/* Unified Buttons */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Button Variants */
+.btn--primary {
+    background: #3d7fbf; /* blue primary */
+    color: #fff;
+}
+
+.btn--secondary {
+    background: #1f2937;
+    color: #fff;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.btn--primary:hover {
+    background: #2a5a8c;
+}
+
+.btn--secondary:hover {
+    background: #374151;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 25px;
+    }
+
+    nav ul.nav-links {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+</style>
+<header>
+    <!-- Logo -->
+    <div class="logo">
+        Gene<span>Analyzer</span>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav>
+        <ul class="nav-links">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/analysis">Analysis</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/signin" class="btn-secondary">Sign In</a></li>
+            <li><a href="/signup" class="btn-primary">Sign Up</a></li>
+        </ul>
+    </nav>
+
+</header>
+<section class="analysis-hero">
+    <div class="analysis-container">
+        <h1>PharmaGuard Analysis</h1>
+        <p>
+            Upload your validated genetic data to receive AI-powered
+            pharmacogenomic risk predictions and clinical guidance.
+        </p>
+    </div>
+</section>
+
+<section class="upload-section">
+
+    <div class="upload-card">
+        <h2>Upload Genetic File</h2>
+        <p>
+            Supported format: VCF (Variant Call Format)
+        </p>
+
+        <form action="/analysis" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="geneticFile">Select VCF File</label>
+                <input type="file" id="geneticFile" name="geneticFile" required>
+            </div>
+
+            <div class="form-group">
+                <label for="drugSelect">Select Drug</label>
+                <select id="drugSelect" name="drug">
+                    <option value="codeine">Codeine</option>
+                    <option value="warfarin">Warfarin</option>
+                    <option value="clopidogrel">Clopidogrel</option>
+                    <option value="simvastatin">Simvastatin</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-main">Run Analysis</button>
+        </form>
+    </div>
+
+</section>
+
+<section class="results-section">
+    <div class="results-card">
+        <h2>Analysis Results</h2>
+        <p>
+            Once the file is processed, personalized drug safety
+            recommendations will appear here.
+        </p>
+
+        <div class="result-placeholder">
+            <p>No analysis performed yet.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>PharmaGuard • Precision Medicine Intelligence Platform</p>
+</footer>
+
+<script>
+    const form = document.querySelector('form');
+    const fileInput = document.getElementById('geneticFile');
+
+    form.addEventListener('submit', function(e) {
+        const file = fileInput.files[0];
+        if (file) {
+            const fileName = file.name;
+            const fileExtension = fileName.split('.').pop().toLowerCase();
+
+            if (fileExtension !== 'vcf') {
+                e.preventDefault(); // Stop form submission
+                alert('Invalid file type! Please upload a VCF file.');
+            }
+        } else {
+            e.preventDefault();
+            alert('Please select a file.');
+        }
+    });
+</script>

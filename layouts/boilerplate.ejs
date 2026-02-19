@@ -1,0 +1,29 @@
+<!-- HMARI WEBSITE KA HR EK PAGE ESA DIKHNA CHAHIYE (AB IS PAGE PE CONTENT KESE AAYEGA BCZ HR PAGE PE TO ALG CONTENT HAI LIKE SHOW PAGE,INDEX PAGE SB PR ALG ALG CONTENT HAI TO AGR HMNE BOILERPLATE SET KR DIYA TB TO HR PAGE PR YAHI CONTENT DIKHEGA TO CONTENT CHANGE KRNE KE LIYE HM APNE CODE ME YE LINE LIKHTE HAI 'layout('boilerplate')' YANI KE HM APNE LAYOUT KO KISI BHI EJS TEMPLATE ME USE KR SKTE HAI) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> <!--Including bootstrap link for css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--including font awesome link for icon so that icon can be included on page-->
+    <!-- below 3 links are for Plus Jakarta Sans font that has been taken from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+     <link href="/css/rating.css" rel="stylesheet">
+     <link href="https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.js"></script>
+</head>
+<body>
+    <%- include("../includes/navbar.ejs") %> <!--including the navbar present in navbar.ejs file in includes folder so that navbar appears on all pages -->
+    <div class="container">
+         <%- include("../includes/flash.ejs") %> 
+        <%- body %>  <!--It tells EJS: “Insert page-specific content here” When you render another EJS file, its content comes here automatically.-->
+    </div>
+    <%- include("../includes/footer.ejs") %> <!--including the footer present in footer.ejs file in includes folder so that footer appears on all pages -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> <!--Including bootstrap link for js -->
+    <script src="/js/script.js"></script>
+</body>
+</html>
