@@ -1,0 +1,127 @@
+{
+  "CODEINE": {
+    "gene": "CYP2D6",
+    "phenotype_rules": {
+      "PM": {
+        "risk": "Toxic",
+        "severity": "high",
+        "recommendation": "Avoid codeine due to poor conversion to morphine."
+      },
+      "URM": {
+        "risk": "Toxic",
+        "severity": "critical",
+        "recommendation": "Avoid codeine due to risk of morphine overdose."
+      },
+      "NM": {
+        "risk": "Safe",
+        "severity": "low",
+        "recommendation": "Standard dosing can be used."
+      }
+    }
+  },
+
+  "CLOPIDOGREL": {
+    "gene": "CYP2C19",
+    "phenotype_rules": {
+      "PM": {
+        "risk": "Ineffective",
+        "severity": "high",
+        "recommendation": "Consider alternative antiplatelet therapy."
+      },
+      "IM": {
+        "risk": "Adjust Dosage",
+        "severity": "moderate",
+        "recommendation": "Consider alternative or monitor closely."
+      },
+      "NM": {
+        "risk": "Safe",
+        "severity": "low",
+        "recommendation": "Standard dosing can be used."
+      }
+    }
+  },
+
+  "WARFARIN": {
+    "gene": "CYP2C9",
+    "phenotype_rules": {
+      "PM": {
+        "risk": "Adjust Dosage",
+        "severity": "high",
+        "recommendation": "Lower starting dose recommended."
+      },
+      "IM": {
+        "risk": "Adjust Dosage",
+        "severity": "moderate",
+        "recommendation": "Dose adjustment may be required."
+      },
+      "NM": {
+        "risk": "Safe",
+        "severity": "low",
+        "recommendation": "Standard dosing with INR monitoring."
+      }
+    }
+  },
+
+  "SIMVASTATIN": {
+    "gene": "SLCO1B1",
+    "phenotype_rules": {
+      "PM": {
+        "risk": "Toxic",
+        "severity": "high",
+        "recommendation": "High risk of myopathy. Consider lower dose or alternative statin."
+      },
+      "IM": {
+        "risk": "Adjust Dosage",
+        "severity": "moderate",
+        "recommendation": "Reduced dose recommended."
+      },
+      "NM": {
+        "risk": "Safe",
+        "severity": "low",
+        "recommendation": "Standard dosing."
+      }
+    }
+  },
+
+  "AZATHIOPRINE": {
+    "gene": "TPMT",
+    "phenotype_rules": {
+      "PM": {
+        "risk": "Toxic",
+        "severity": "critical",
+        "recommendation": "Severe myelosuppression risk. Avoid or drastically reduce dose."
+      },
+      "IM": {
+        "risk": "Adjust Dosage",
+        "severity": "high",
+        "recommendation": "Reduce dose and monitor blood counts."
+      },
+      "NM": {
+        "risk": "Safe",
+        "severity": "low",
+        "recommendation": "Standard dosing."
+      }
+    }
+  },
+
+  "FLUOROURACIL": {
+    "gene": "DPYD",
+    "phenotype_rules": {
+      "PM": {
+        "risk": "Toxic",
+        "severity": "critical",
+        "recommendation": "Avoid fluorouracil due to high toxicity risk."
+      },
+      "IM": {
+        "risk": "Adjust Dosage",
+        "severity": "high",
+        "recommendation": "Consider reduced dose with close monitoring."
+      },
+      "NM": {
+        "risk": "Safe",
+        "severity": "low",
+        "recommendation": "Standard dosing."
+      }
+    }
+  }
+}

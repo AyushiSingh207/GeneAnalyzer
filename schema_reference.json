@@ -1,0 +1,25 @@
+{
+  "patient_id": "PATIENT_XXX",
+  "drug": "DRUG_NAME",
+  "timestamp": "ISO8601_timestamp",
+  "risk_assessment": {
+    "risk_label": "Safe|Adjust Dosage|Toxic|...",
+    "confidence_score": 0.0,
+    "severity": "none|low|moderate|high|critical"
+  },
+  "pharmacogenomic_profile": {
+    "primary_gene": "GENE_SYMBOL",
+    "diplotype": "*X/*Y",
+    "phenotype": "PM|IM|NM|RM|URM|Unknown",
+    "detected_variants": [
+      { "rsid": "rsXXXX" }
+    ]
+  },
+  "clinical_recommendation": {},
+  "llm_generated_explanation": {
+    "summary": "..."
+  },
+  "quality_metrics": {
+    "vcf_parsing_success": true
+  }
+}
