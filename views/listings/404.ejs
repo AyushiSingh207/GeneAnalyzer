@@ -1,0 +1,53 @@
+<%- include('layouts/boilerplate') %>
+
+<style>
+    .not-found {
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 50px 20px;
+    }
+    .not-found h1 {
+        color: #00ffc8;
+        font-size: 120px;
+        margin-bottom: 20px;
+        text-shadow: 0 0 20px rgba(0,255,200,0.3);
+    }
+    .not-found h2 {
+        color: #fff;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .not-found p {
+        color: #d4e2d0;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .btn-home {
+        display: inline-block;
+        padding: 12px 40px;
+        background: #00ffc8;
+        color: #111827;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    .btn-home:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(0,255,200,0.3);
+    }
+</style>
+
+<div class="not-found">
+    <div>
+        <h1>404</h1>
+        <h2>Page Not Found</h2>
+        <p>The page you're looking for doesn't exist or has been moved.</p>
+        <a href="/" class="btn-home">Go Home</a>
+    </div>
+</div>
+
+<%- include('layouts/footer') %>

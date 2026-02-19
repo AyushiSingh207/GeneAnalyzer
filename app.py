@@ -14,6 +14,27 @@ app = FastAPI()
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # hackathon ke liye ok
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# ============ YAHAN SE NAYA CODE ADD KARO ============
+
+@app.get("/")
+async def root():
+    return {"message": "PharmaGuard API is running", "status": "active"}
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy", "server": "running"}
+
+# ============ YAHAN TAK NAYA CODE ============
 
 @app.post("/analyze")
 async def analyze_vcf(
@@ -67,12 +88,8 @@ async def analyze_vcf(
     }
 
 
-from fastapi.middleware.cors import CORSMiddleware
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # hackathon ke liye ok
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+if __name__ == "__main__":
+    import uvicorn
+    print("🚀 PharmaGuard Server starting on http://localhost:8000")
+    print("📝 API Documentation: http://localhost:8000/docs")
+    uvicorn.run(app, host="0.0.0.0", port=8000)
